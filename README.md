@@ -1,6 +1,6 @@
 # 🛡️ AK SecureTrack
 
-![AK SecureTrack Preview](SKLOGO1.png)
+![AK SecureTrack Preview](https://github.com/krkralkair007/AK-SecureTrack/blob/6f3f250e52186b9a88913c4f880f32379906dbaa/AK1.jpeg)
 
 A security-focused platform designed to monitor network activity, detect suspicious behavior, and provide real-time visibility into connected devices.
 
