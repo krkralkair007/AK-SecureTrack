@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AK SecureTrack | Track. Secure. Control.</title>
+<link rel="icon" href="IMG/SKLOGO1.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ================= GLOBAL ================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#1e293b;}
+a{text-decoration:none;}
+
+.container{width:90%;max-width:1200px;margin:auto;}
+
+/* ================= NAVBAR ================= */
+header{
+  background:linear-gradient(90deg,#020617,#1e3a8a);
+  padding:15px 0;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+.navbar{display:flex;justify-content:space-between;align-items:center;}
+.logo{display:flex;align-items:center;gap:10px;}
+.logo img{width:95px;}
+.logo-text{font-size:18px;font-weight:600;color:#fff;}
+.logo-text strong{color:#60a5fa;}
+nav a{color:#e5e7eb;margin-left:20px;font-size:14px;}
+
+.btn{padding:10px 18px;border-radius:6px;font-size:14px;cursor:pointer;transition:.3s;}
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.primary{background:#2563eb;color:#fff;}
+.outline{border:1px solid #fff;color:#fff}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  padding:300px 0;
+  background:url("IMG/SKHERO1.jpeg") center/cover no-repeat;
+  color:#fff;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(2,6,23,.75),rgba(2,6,23,.75));
+}
+.hero .container{position:relative;z-index:2;}
+.hero h1{font-size:54px;font-weight:700;}
+.hero h2{color:#60a5fa;margin:10px 0;}
+.hero p{max-width:600px;color:#c7d2fe;margin-bottom:25px;font-size:16px;}
+
+/* ================= SECTION TITLES ================= */
+.section-title{text-align:center;font-size:36px;margin-top:80px;}
+.section-subtitle{text-align:center;color:#64748b;margin:10px 0 50px;font-size:15px}
+
+/* ================= SOLUTIONS ================= */
+.solution-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.card{
+  background:#fff;
+  padding:35px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.4s;
+}
+.card:hover{transform:translateY(-8px);}
+.card i{font-size:34px;color:#2563eb;margin-bottom:12px;}
+
+/* ================= TRUST ================= */
+.trust{
+  background:#fff;
+  padding:80px 0;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.trust h3{color:#2563eb;font-size:32px;}
+.trust p{color:#64748b;font-size:14px}
+
+/* ================= PRODUCTS ================= */
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin:80px auto;
+}
+.product-link{color:inherit;display:block;}
+.product-card{
+  background:rgba(2,6,23,.85);
+  color:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  text-align:center;
+  transition:.4s;
+}
+.product-card:hover{transform:translateY(-10px);}
+.product-card img{width:100%;height:180px;object-fit:cover;}
+.product-card h3{color:#60a5fa;margin:18px 0 8px;}
+.product-card p{font-size:14px;color:#c7d2fe;padding:0 20px 25px}
+
+
+/* ================= USE CASES + COVERAGE ================= */
+.usecase-section{
+  padding:90px 0;
+  background:#ffffff;
+}
+
+/* GRID */
+.usecase-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  margin-top:50px;
+}
+
+/* CARD */
+.usecase-card{
+  background:#f8fafc;
+  border-radius:16px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+  transition:0.35s ease;
+}
+
+.usecase-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 50px rgba(37,99,235,0.15);
+}
+
+.usecase-card i{
+  font-size:32px;
+  color:#2563eb;
+  margin-bottom:12px;
+}
+
+.usecase-card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.usecase-card p{
+  font-size:14px;
+  color:#64748b;
+  line-height:1.6;
+}
+
+/* COVERAGE */
+.coverage-box{
+  margin-top:80px;
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:#ffffff;
+  padding:60px;
+  border-radius:22px;
+  text-align:center;
+}
+
+.coverage-box h3{
+  font-size:26px;
+  margin-bottom:10px;
+}
+
+.coverage-box p{
+  color:#c7d2fe;
+  max-width:720px;
+  margin:0 auto 35px;
+  line-height:1.7;
+}
+
+.coverage-box img{
+  width:100%;
+  max-width:1100px;
+  border-radius:18px;
+  box-shadow:0 25px 70px rgba(0,0,0,0.6);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .coverage-box{
+    padding:40px 25px;
+  }
+}
+
+
+/* ================= REVIEWS ================= */
+.reviews-section{
+  padding:90px 0;
+  background:#f8fafc;
+}
+
+.review-form{
+  max-width:500px;
+  margin:0 auto 60px;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.review-form input,
+.review-form textarea{
+  width:100%;
+  padding:12px;
+  margin:12px 0;
+  border-radius:8px;
+  border:1px solid #cbd5f5;
+  font-size:14px;
+}
+
+.review-form textarea{min-height:110px;resize:none;}
+
+.stars{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  font-size:26px;
+  color:#cbd5f5;
+  cursor:pointer;
+}
+
+.stars i.active{color:#facc15;}
+
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.review-card{
+  background:#fff;
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.review-card .stars{
+  justify-content:flex-start;
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.review-card p{
+  font-size:14px;
+  color:#475569;
+}
+
+.review-card small{
+  color:#94a3b8;
+}
+
+
+.feature-card{
+  background:#f8fafc;
+  padding:80px 0;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.feature-text h2{
+  font-size:34px;
+  font-weight:700;
+  color:#020617;
+  margin-bottom:15px;
+}
+
+.feature-text p{
+  font-size:16px;
+  line-height:1.7;
+  color:#475569;
+  margin-bottom:20px;
+}
+
+.feature-tagline{
+  display:block;
+  font-size:14px;
+  color:#2563eb;
+  margin-bottom:30px;
+  font-weight:500;
+}
+
+.feature-btn{
+  display:inline-block;
+  padding:14px 28px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:8px;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.feature-btn:hover{
+  background:#1e40af;
+  transform:translateY(-2px);
+}
+
+.feature-image img{
+  width:100%;
+  border-radius:18px;
+  box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .feature-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .feature-image{
+    order:-1;
+  }
+}
+
+.feature-card{
+  animation:fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+/* ================= DASHBOARD ================= */
+.dashboard{
+  background:#020617;
+  color:#fff;
+  text-align:center;
+  padding:90px 0;
+}
+.dashboard p{color:#c7d2fe;margin:15px 0 30px;}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:#cbd5f5;
+  padding:60px 0 30px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+.footer-logo img{width:280px;}
+.footer h4{color:#fff;margin-bottom:15px;}
+.footer a{
+  display:block;
+  color:#cbd5f5;
+  font-size:14px;
+  margin-bottom:8px;
+  text-decoration:none;
+}
+.footer a:hover{color:#60a5fa;}
+.footer-contact p{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+.footer-social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.footer-social a{
+  width:36px;
+  height:36px;
+  background:#1e293b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+}
+.footer-social a:hover{background:#2563eb;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:40px;
+  padding-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#94a3b8;
+}
+/* ================= ANIMATIONS ================= */
+.reveal{opacity:0;transform:translateY(40px);transition:1s;}
+.reveal.active{opacity:1;transform:none;}
+
+@media(max-width:768px){
+  .hero{text-align:center}
+  .hero h1{font-size:40px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">
+      <img src="IMG/SKLOGO1.png">
+      <span class="logo-text"><strong>AK</strong> SecureTrack</span>
+    </div>
+    <nav>
+      <a href="index.html" class="btn primary">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Track. Secure. Control.</h1>
+    <h2>Professional GPS Tracking Platform</h2>
+    <p>
+      AK SecureTrack delivers real-time vehicle monitoring, theft prevention,
+      and fleet intelligence through powerful hardware and a secure cloud platform.
+    </p>
+    <a href="about-us.html" class="btn primary">Our View</a>
+    <a href="solutions.html" class="btn outline">View Solutions</a>
+  </div>
+</section>
+
+<marquee 
+  style="
+    background: linear-gradient(90deg,#020617,#1e3a8a);
+    color:#e5e7eb;
+    font-size:14px;
+    font-weight:500;
+    padding:12px 0;
+    letter-spacing:0.6px;
+  "
+  behavior="alternate"
+  direction="left"
+>
+  <i class="fa-solid fa-location-dot"></i> Live Tracking &nbsp; • &nbsp;
+  <i class="fa-solid fa-shield-halved"></i> Theft Protection &nbsp; • &nbsp;
+  <i class="fa-solid fa-car"></i> Fleet Management &nbsp; • &nbsp;
+  <i class="fa-solid fa-chart-line"></i> Smart Reports &nbsp; • &nbsp;
+  <i class="fa-solid fa-lock"></i> Secure Platform
+</marquee>
+
+<!-- ================= USE CASES + GLOBAL COVERAGE ================= -->
+<section class="usecase-section">
+  <div class="container">
+
+    <!-- TITLE -->
+    <h2 class="section-title">Built for Every Vehicle Operation</h2>
+    <p class="section-subtitle">
+      AK SecureTrack adapts seamlessly from single vehicles to enterprise fleets worldwide.
+    </p>
+
+    <!-- USE CASE CARDS -->
+    <div class="usecase-grid">
+
+      <div class="usecase-card">
+        <i class="fas fa-car"></i>
+        <h3>Private Vehicles</h3>
+        <p>Protect your personal vehicle with live tracking and instant theft alerts.</p>
+      </div>
+
+      <div class="usecase-card">
+        <i class="fas fa-taxi"></i>
+        <h3>Car Rental Companies</h3>
+        <p>Monitor rentals, reduce theft, and manage vehicles remotely.</p>
+      </div>
+
+      <div class="usecase-card">
+        <i class="fas fa-truck"></i>
+        <h3>Logistics & Delivery</h3>
+        <p>Track routes, improve delivery efficiency, and monitor driver behavior.</p>
+      </div>
+
+      <div class="usecase-card">
+        <i class="fas fa-building"></i>
+        <h3>Corporate Fleets</h3>
+        <p>Centralized fleet control, reports, and operational visibility.</p>
+      </div>
+
+    </div>
+
+    <!-- GLOBAL COVERAGE -->
+    
+
+      
+
+  </div>
+</section>
+
+<marquee 
+  style="
+    background: linear-gradient(90deg,#020617,#1e3a8a);
+    color:#e5e7eb;
+    font-size:14px;
+    font-weight:500;
+    padding:12px 0;
+    letter-spacing:0.6px;
+  "
+  behavior="alternate"
+  direction="left"
+>
+  <i class="fa-solid fa-check-circle" style="color:#60a5fa;"></i> 99.9% Platform Uptime &nbsp; • &nbsp;
+  <i class="fa-solid fa-lock" style="color:#60a5fa;"></i> Encrypted Data &nbsp; • &nbsp;
+  <i class="fa-solid fa-globe" style="color:#60a5fa;"></i> Global Coverage &nbsp; • &nbsp;
+  <i class="fa-solid fa-chart-line" style="color:#60a5fa;"></i> Smart Dashboard &nbsp; • &nbsp;
+  <i class="fa-solid fa-shield-halved" style="color:#60a5fa;"></i> Secure Platform
+</marquee>
+
+
+
+<section class="feature-card">
+  <div class="container feature-grid">
+
+    <!-- TEXT SIDE -->
+    <div class="feature-text">
+      <h2>Be in Control of What Matters Most</h2>
+      <p>
+        AK SecureTrack helps you protect vehicles, monitor activity,
+        and make smarter decisions with real-time data and advanced security.
+      </p>
+
+      <span class="feature-tagline">
+        One system. Total control. Complete peace of mind.
+      </span>
+
+      <a href="contact-us.html" class="feature-btn">Get Started</a>
+    </div>
+
+    <!-- IMAGE SIDE -->
+    <div class="feature-image">
+      <img src="IMG/SK.jpg" alt="AK SecureTrack Dashboard">
+    </div>
+
+  </div>
+</section>
+
+
+<div class="products-grid reveal">
+  <a href="product-gps.html" class="product-link">
+    <div class="product-card">
+      <img src="IMG/HOMESIM2.jpg">
+      <h3>GPS Tracking Device</h3>
+      <p>High-accuracy hardware with real-time alerts.</p>
+    </div>
+  </a>
+  <a href="SIM.html" class="product-link">
+    <div class="product-card">
+      <img src="IMG/HOMESIM1.jpg">
+      <h3>Tracking Platform</h3>
+      <p>Advanced dashboard & fleet management.</p>
+    </div>
+  </a>
+</div>
+<section class="trust reveal">
+  <div class="container trust-grid">
+    <div><h3>99.9%</h3><p>Platform Uptime</p></div>
+    <div><h3>24/7</h3><p>Live Monitoring</p></div>
+    <div><h3>Secure</h3><p>Encrypted Data</p></div>
+    <div><h3>Scalable</h3><p>From 1 to 1000+ Vehicles</p></div>
+  </div>
+</section>
+
+
+<!-- ================= REVIEWS SECTION ================= -->
+<section class="reviews-section">
+  <div class="container">
+
+    <h2 class="section-title">Customer Reviews</h2>
+    <p class="section-subtitle">Your feedback helps us grow and improve.</p>
+
+    <!-- REVIEW FORM -->
+    <form id="reviewForm" class="review-form">
+      
+      <div class="stars">
+        <i class="fa-solid fa-star" data-value="1"></i>
+        <i class="fa-solid fa-star" data-value="2"></i>
+        <i class="fa-solid fa-star" data-value="3"></i>
+        <i class="fa-solid fa-star" data-value="4"></i>
+        <i class="fa-solid fa-star" data-value="5"></i>
+      </div>
+
+      <input type="hidden" id="rating" required>
+
+      <input type="email" id="email" placeholder="Your email" required>
+
+      <textarea id="comment" placeholder="Write your review..." required></textarea>
+
+      <button type="submit" class="btn primary">Submit Review</button>
+    </form>
+
+    <!-- REVIEWS DISPLAY -->
+    <div id="reviewsList" class="reviews-grid"></div>
+
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <div class="footer-logo">
+        <img src="IMG/SKLOGO1.png">
+      </div>
+    </div>
+
+    <div>
+      <h4>Solutions</h4>
+      <a href="product-gps.html">Vehicle Tracking</a>
+      <a href="solutions.html">Fleet Management</a>
+      <a href="how-it-works.html">Engine Control</a>
+      <a href="how-it-works.html">Reports</a>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone"></i> +905527198992</p>
+      <p><i class="fas fa-envelope"></i> aksecuretrack@gmail.com</p>
+      <p><i class="fas fa-location-dot"></i> Türkiye</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 AK SecureTrack. All rights reserved.
+  </div>
+</footer>
+<marquee 
+  style="
+    background: linear-gradient(90deg,#020617,#1e3a8a);
+    color:#e5e7eb;
+    font-size:14px;
+    font-weight:500;
+    padding:12px 0;
+    letter-spacing:0.6px;
+  "
+  behavior="alternate"
+  direction="left"
+>
+  <i class="fa-solid fa-location-dot"></i> Live Tracking &nbsp; • &nbsp;
+  <i class="fa-solid fa-shield-halved"></i> Theft Protection &nbsp; • &nbsp;
+  <i class="fa-solid fa-car"></i> Fleet Management &nbsp; • &nbsp;
+  <i class="fa-solid fa-chart-line"></i> Smart Reports &nbsp; • &nbsp;
+  <i class="fa-solid fa-lock"></i> Secure Platform
+</marquee>
+
+<script type="module">
+/* ================= BASIC SCROLL ANIMATION ================= */
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add('active');
+    }
+  });
+});
+
+
+/* ================= FIREBASE ================= */
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  query,
+  orderBy,
+  onSnapshot,
+  serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+/* 🔥 Firebase Config (غيّري القيم فقط) */
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT.firebaseapp.com",
+  projectId: "ak-track-reviews"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+/* ================= STAR RATING ================= */
+let selectedRating = 0;
+const stars = document.querySelectorAll('.stars i');
+const ratingInput = document.getElementById('rating');
+
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    selectedRating = Number(star.dataset.value);
+    ratingInput.value = selectedRating;
+
+    stars.forEach(s => s.classList.remove('active'));
+    for (let i = 0; i < selectedRating; i++) {
+      stars[i].classList.add('active');
+    }
+  });
+});
+
+
+/* ================= SUBMIT REVIEW ================= */
+const reviewForm = document.getElementById('reviewForm');
+
+reviewForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!selectedRating) {
+    alert("Please select a rating ⭐");
+    return;
+  }
+
+  await addDoc(collection(db, "reviews"), {
+    rating: selectedRating,
+    email: document.getElementById('email').value,
+    comment: document.getElementById('comment').value,
+    createdAt: serverTimestamp()
+  });
+
+  reviewForm.reset();
+  selectedRating = 0;
+  stars.forEach(s => s.classList.remove('active'));
+});
+
+
+/* ================= LOAD REVIEWS ================= */
+const reviewsList = document.getElementById('reviewsList');
+const reviewsQuery = query(
+  collection(db, "reviews"),
+  orderBy("createdAt", "desc")
+);
+
+onSnapshot(reviewsQuery, (snapshot) => {
+  reviewsList.innerHTML = "";
+
+  snapshot.forEach(doc => {
+    const r = doc.data();
+
+    reviewsList.innerHTML += `
+      <div class="review-card">
+        <div class="stars">
+          ${'<i class="fa-solid fa-star active"></i>'.repeat(r.rating)}
+        </div>
+        <p>${r.comment}</p>
+        <small>${r.email}</small>
+      </div>
+    `;
+  });
+});
+</script>
+</body>
+</html>

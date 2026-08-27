@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Solutions | AK SecureTrack</title>
+<link rel="icon" href="IMG/SKLOGO1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#1e293b;}
+.container{width:90%;max-width:1200px;margin:auto;}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#020617,#1e3a8a);
+  padding:15px 0;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{width:60px;}
+.logo-text{
+  color:#fff;
+  font-weight:600;
+  font-size:18px;
+}
+.logo-text strong{color:#60a5fa;}
+
+nav a{
+  color:#e5e7eb;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+
+/* BUTTON */
+.btn{
+  padding:8px 16px;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:14px;
+}
+.btn.primary{
+  background:#2563eb;
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(2,6,23,.8),rgba(30,64,175,.8)),url("IMG/SK.jpg");
+  background-size:cover;
+  background-position:center;
+  color:#fff;
+  padding:190px 0;
+  text-align:center;
+}
+.hero h1{font-size:42px;}
+.hero p{color:#c7d2fe;margin-top:10px;}
+
+/* SECTIONS */
+.section{padding:80px 0;}
+.section h2{text-align:center;font-size:34px;}
+.subtitle{
+  text-align:center;
+  color:#64748b;
+  max-width:700px;
+  margin:10px auto 40px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(0,0,0,.1);
+  text-align:center;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-6px);}
+.card img{
+  width:100%;
+  max-height:180px;
+  object-fit:contain;
+  margin-bottom:20px;
+}
+.card p{color:#64748b;font-size:14px;}
+
+/* FOOTER */
+.footer{
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:#cbd5f5;
+  padding:60px 0 30px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+.footer-logo img{width:280px;}
+.footer h4{color:#fff;margin-bottom:15px;}
+.footer a{
+  display:block;
+  color:#cbd5f5;
+  font-size:14px;
+  margin-bottom:8px;
+  text-decoration:none;
+}
+.footer a:hover{color:#60a5fa;}
+.footer-contact p{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+.footer-social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.footer-social a{
+  width:36px;
+  height:36px;
+  background:#1e293b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+}
+.footer-social a:hover{background:#2563eb;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:40px;
+  padding-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .navbar{flex-direction:column;gap:10px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">
+      <img src="IMG/SKLOGO1.png">
+      <span class="logo-text"><strong>AK</strong> SecureTrack</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="solutions.html" class="btn primary">Solutions</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about-us.html">About Us</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Our Solutions</h1>
+  <p>Professional GPS tracking hardware and platform services.</p>
+</section>
+
+<section class="section container">
+  <h2>Our Products</h2>
+  <p class="subtitle">Everything you need to track, secure, and control your vehicles.</p>
+
+  <div class="grid">
+
+    <!-- GPS DEVICE -->
+    <div class="card">
+      <img src="IMG/HOMESIM2.jpg"width="200px" height="200px" alt="GPS Device">
+      <h3>GPS Tracking Device</h3>
+      <p>
+        High-precision GPS hardware for real-time vehicle tracking,
+        alerts, and theft protection.
+      </p>
+      <button onclick="window.location.href='product-gps.html'">
+        <span>View Device</span>
+      </button>
+    </div>
+
+    <!-- SIM & PLATFORM -->
+    <div class="card">
+      <img src="IMG/HOMESIM1.jpg"width="200px" height="200px" alt="SIM & Platform">
+      <h3>SIM Card & Tracking Platform</h3>
+      <p>
+        Secure SIM connectivity and cloud-based dashboard to monitor,
+        manage, and control your vehicles from anywhere.
+      </p>
+      <button onclick="window.location.href='SIM.html'">
+        <span>View SIM</span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <div class="footer-logo">
+        <img src="IMG/SKLOGO1.png">
+      </div>
+    </div>
+
+    <div>
+      <h4>Solutions</h4>
+      <a href="#">Vehicle Tracking</a>
+      <a href="#">Fleet Management</a>
+      <a href="#">Engine Control</a>
+      <a href="#">Reports</a>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone"></i> +905527198992</p>
+      <p><i class="fas fa-envelope"></i> aksecuretrack@gmail.com</p>
+      <p><i class="fas fa-location-dot"></i> Türkiye</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 AK SecureTrack. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>

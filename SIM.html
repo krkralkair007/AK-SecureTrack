@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tracking SIM Card | AK SecureTrack</title>
+<link rel="icon" href="IMG/SKLOGO1.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f7fa;color:#1e293b;}
+.container{width:90%;max-width:1200px;margin:auto;}
+
+/* HEADER */
+header{
+  background:linear-gradient(90deg,#020617,#1e3a8a);
+  padding:15px 0;
+}
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.logo img{width:60px;}
+.logo-text{color:#fff;font-weight:600;}
+.logo-text strong{color:#60a5fa;}
+nav a{
+  color:#e5e7eb;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(rgba(2,6,23,.8),rgba(30,64,175,.8)),url("IMG/SKHERO1.jpeg");
+  color:#fff;
+  padding:80px 0;
+  text-align:center;
+}
+.hero p{color:#c7d2fe;margin-top:10px;}
+
+/* SECTION */
+.section{padding:80px 0;}
+
+/* PRODUCT */
+.product{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:flex-start;
+}
+
+/* GALLERY */
+.gallery-main img{
+  width:100%;
+  max-width:420px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+.gallery-thumbs{
+  display:flex;
+  gap:12px;
+  margin-top:15px;
+}
+.gallery-thumbs img{
+  width:80px;
+  cursor:pointer;
+  border-radius:8px;
+  border:2px solid transparent;
+}
+.gallery-thumbs img:hover{
+  border-color:#2563eb;
+}
+
+/* INFO */
+.product h2{margin-bottom:10px;}
+.product p{color:#475569;line-height:1.7;}
+.product ul{margin-top:20px;}
+.product ul li{margin-bottom:10px;}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 24px;
+  background:#25D366;
+  color:#fff;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:500;
+}
+.btn:hover{background:#1ebe5d;}
+
+/* FOOTER */
+.footer{
+  background:linear-gradient(180deg,#020617,#0f172a);
+  color:#cbd5f5;
+  padding:60px 0 30px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+.footer-logo img{width:280px;}
+.footer h4{color:#fff;margin-bottom:15px;}
+.footer a{
+  display:block;
+  color:#cbd5f5;
+  font-size:14px;
+  margin-bottom:8px;
+  text-decoration:none;
+}
+.footer a:hover{color:#60a5fa;}
+.footer-contact p{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+}
+.footer-social{
+  display:flex;
+  gap:12px;
+  margin-top:12px;
+}
+.footer-social a{
+  width:36px;
+  height:36px;
+  background:#1e293b;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:#fff;
+}
+.footer-social a:hover{background:#2563eb;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  margin-top:40px;
+  padding-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#94a3b8;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .product{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="logo">
+      <img src="IMG/SKLOGO1.png">
+      <span class="logo-text"><strong>AK</strong> SecureTrack</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="contact-us.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Secure Tracking SIM Card</h1>
+  <p>
+    Reliable connectivity designed to keep your vehicles online,
+    visible, and protected at all times.
+  </p>
+</section>
+
+<section class="section container">
+  <div class="product">
+
+    <!-- GALLERY -->
+    <div>
+      <div class="gallery-main">
+        <img id="mainImage" src="IMG/SIM1.jpg" alt="Tracking SIM Card">
+      </div>
+      <div class="gallery-thumbs">
+        <img src="IMG/SIM1.jpg" onclick="changeImage(this.src)">
+        <img src="IMG/SIM2.jpg" onclick="changeImage(this.src)">
+        <img src="IMG/SIM3.jpg" onclick="changeImage(this.src)">
+      </div>
+      <div style="
+  margin-top:20px;
+  font-size:22px;
+  font-weight:700;
+  color:#2563eb;
+">
+  First Year: FREE
+</div>
+
+<div style="
+  font-size:18px;
+  font-weight:600;
+  color:#1e293b;
+  margin-top:6px;
+">
+  From Second Year: $10 / Year
+</div>
+
+<div style="
+  font-size:14px;
+  color:#64748b;
+  margin-top:6px;
+">
+  SIM card & platform access included
+</div>
+<div style="font-size:13px;color:#64748b;margin-top:8px;">
+  No contracts • Cancel anytime
+</div>
+    </div>
+
+    <!-- INFO -->
+    <div>
+      <h2>AK SecureTrack Tracking SIM Card</h2>
+      <p>
+        The AK SecureTrack SIM Card is specially designed for GPS tracking systems,
+        ensuring stable connectivity, fast data transmission, and uninterrupted
+        vehicle monitoring. It keeps your GPS device online 24/7 so you can track,
+        manage, and secure your vehicles without signal interruptions.
+      </p>
+
+      <div style="margin:20px 0;font-size:26px;font-weight:600;color:#2563eb;">
+        Monthly Subscription
+        <span style="font-size:14px;color:#64748b;">
+          (SIM card & platform access)
+        </span>
+      </div>
+
+      <ul>
+        <li>Dedicated SIM optimized for GPS tracking</li>
+        <li>Stable mobile data connection (no signal drops)</li>
+        <li>Real-time location updates & instant alerts</li>
+        <li>Compatible with AK SecureTrack GPS devices</li>
+        <li>Supports live tracking, history & reports</li>
+        <li>Secure data transmission & encrypted access</li>
+        <li>Nationwide network coverage</li>
+      </ul>
+
+      <p style="margin-top:15px;color:#475569;font-size:14px;">
+        ⚠️ This SIM card is exclusively designed for tracking purposes and
+        cannot be used for calls or regular internet browsing.
+      </p>
+
+      <a
+        href="https://wa.me/905527198992?text=Hello%20AK%20SecureTrack,%20I%20want%20to%20subscribe%20to%20the%20AK%20SecureTrack%20SIM%20card%20for%20GPS%20tracking."
+        target="_blank"
+        class="btn">
+        Secure ordering & full support via WhatsApp
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <div class="footer-logo">
+        <img src="IMG/SKLOGO1.png">
+      </div>
+    </div>
+
+    <div>
+      <h4>Solutions</h4>
+      <a href="#">Vehicle Tracking</a>
+      <a href="#">Fleet Management</a>
+      <a href="#">Remote Engine Control</a>
+      <a href="#">Smart Reports</a>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-phone"></i> +905527198992</p>
+      <p><i class="fas fa-envelope"></i> aksecuretrack@gmail.com</p>
+      <p><i class="fas fa-location-dot"></i> Türkiye</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 AK SecureTrack. All rights reserved.
+  </div>
+</footer>
+
+<script>
+function changeImage(src){
+  document.getElementById("mainImage").src = src;
+}
+</script>
+
+</body>
+</html>
