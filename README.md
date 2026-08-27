@@ -50,7 +50,7 @@ The project helped develop experience with real-time communication, authenticati
 
 The project provides a centralized dashboard for monitoring network activity, devices, alerts, and security events.
 
-![AK SecureTrack Dashboard](SKLOGO1.png)
+![AK SecureTrack Dashboard](https://github.com/krkralkair007/AK-SecureTrack/blob/d4246535cc2383ba199409668b42f9f9d4d7524d/SKLOGO1.png)
 
 ---
 
