@@ -72,6 +72,3 @@ AK SecureTrack is designed with security in mind, including authenticated access
 
 Full-Stack Developer focused on building scalable web applications with modern technologies, clean UI, secure APIs, and real-world functionality.
 
----
-
-⭐ Feel free to explore the project and its source code.
